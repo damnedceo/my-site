@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[dev]
+  command = "npm run dev"      # запускает Vite
+  targetPort = 5173            # порт, на котором висит Vite
+  publish = "dist"             # можно указать, но для dev не критично
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
